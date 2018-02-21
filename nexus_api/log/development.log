@@ -1,0 +1,1044 @@
+Started GET "/" for ::1 at 2018-02-21 14:34:16 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/yonatan/.rvm/gems/ruby-2.4.2@nexus/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/yonatan/.rvm/gems/ruby-2.4.2@nexus/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (71.0ms)
+Completed 200 OK in 4638ms (Views: 203.5ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2018-02-21 14:34:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/students" for ::1 at 2018-02-21 14:34:28 -0500
+Processing by StudentsController#index as HTML
+  [1m[35m (207.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mStudent Load (161.3ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (18.95ms)
+Completed 200 OK in 1598ms (Views: 1321.6ms | ActiveRecord: 489.8ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 14:45:37 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (631.9ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (90.45ms)
+Completed 200 OK in 1403ms (Views: 770.8ms | ActiveRecord: 631.9ms)
+
+
+Started GET "/students.json" for ::1 at 2018-02-21 15:11:16 -0500
+Processing by StudentsController#index as JSON
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 15:29:39 -0500
+Processing by StudentsController#index as HTML
+Completed 204 No Content in 515ms
+
+
+Started GET "/students.json" for ::1 at 2018-02-21 15:29:51 -0500
+Processing by StudentsController#index as JSON
+Completed 204 No Content in 0ms
+
+
+Started GET "/students" for ::1 at 2018-02-21 15:30:19 -0500
+Processing by StudentsController#index as HTML
+Completed 204 No Content in 1ms
+
+
+Started GET "/students" for ::1 at 2018-02-21 15:30:23 -0500
+Processing by StudentsController#index as HTML
+Completed 204 No Content in 0ms
+
+
+Started GET "/students" for ::1 at 2018-02-21 15:30:50 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/services/students_service.rb:2:in `initialize'
+app/controllers/students_controller.rb:5:in `new'
+app/controllers/students_controller.rb:5:in `index'
+Started GET "/students" for ::1 at 2018-02-21 15:31:14 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 5ms
+
+
+  
+NameError (undefined local variable or method `psdagf' for #<StudentsService:0x00000000042aa1a8>):
+  
+app/services/students_service.rb:7:in `students'
+app/controllers/students_controller.rb:5:in `index'
+Started GET "/students" for ::1 at 2018-02-21 15:32:56 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 6ms
+
+
+  
+NameError (undefined local variable or method `psdagf' for #<StudentsService:0x000000000223d460>):
+  
+app/services/students_service.rb:7:in `students'
+app/controllers/students_controller.rb:5:in `index'
+Started GET "/students" for ::1 at 2018-02-21 15:33:55 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 482ms
+
+
+
+NameError - undefined local variable or method `psdagf' for #<StudentsService:0x0000000003b459a8>:
+  app/services/students_service.rb:7:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/736ece9741b23247/variables" for ::1 at 2018-02-21 15:33:56 -0500
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:34:05 -0500
+  [1m[35m (483.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mStudent Load (114.1ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:34:15 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:34:22 -0500
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT  `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1[0m
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:34:26 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1[0m
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:34:27 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1[0m
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:34:33 -0500
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:34:36 -0500
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` LIMIT 11[0m
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:34:59 -0500
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1[0m
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:35:06 -0500
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` ORDER BY `students`.`id` ASC LIMIT 1[0m
+Started POST "/__better_errors/736ece9741b23247/eval" for ::1 at 2018-02-21 15:35:33 -0500
+  [1m[36mScore Load (17.2ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started GET "/scores" for ::1 at 2018-02-21 15:36:55 -0500
+
+NameError - uninitialized constant ScoresController:
+
+Started GET "/scores" for ::1 at 2018-02-21 15:37:05 -0500
+
+NameError - uninitialized constant ScoresController:
+
+Started POST "/__better_errors/d34b5d3945702a03/variables" for ::1 at 2018-02-21 15:37:06 -0500
+Started GET "/students" for ::1 at 2018-02-21 15:37:27 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `psdagf' for #<StudentsService:0x0000000003886758>:
+  app/services/students_service.rb:7:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/534bd8378fbe9d7f/variables" for ::1 at 2018-02-21 15:37:27 -0500
+Started GET "/students" for ::1 at 2018-02-21 15:45:23 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 852ms
+
+
+
+NameError - undefined local variable or method `psdagf' for #<StudentsService:0x00000000035c32c8>:
+  app/services/students_service.rb:7:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/5dc8360028403210/variables" for ::1 at 2018-02-21 15:45:26 -0500
+Started POST "/__better_errors/5dc8360028403210/eval" for ::1 at 2018-02-21 15:45:34 -0500
+  [1m[35m (229.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mStudent Load (163.1ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/5dc8360028403210/eval" for ::1 at 2018-02-21 15:45:39 -0500
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started GET "/students" for ::1 at 2018-02-21 15:47:40 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (18.1ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 20.0ms)
+
+
+
+NameError - undefined local variable or method `psdagf' for #<StudentsService:0x00000000036089e0>:
+  app/services/students_service.rb:12:in `score'
+  app/services/students_service.rb:7:in `block in students'
+  app/services/students_service.rb:7:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/47ea251c64846f90/variables" for ::1 at 2018-02-21 15:47:41 -0500
+Started GET "/students" for ::1 at 2018-02-21 15:49:04 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (418.7ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Completed 500 Internal Server Error in 1099ms (ActiveRecord: 794.2ms)
+
+
+
+NoMethodError - undefined method `render' for #<StudentsService:0x0000000003529150>:
+  app/services/students_service.rb:8:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/0de977cfd2d0e367/variables" for ::1 at 2018-02-21 15:49:07 -0500
+Started POST "/__better_errors/0de977cfd2d0e367/eval" for ::1 at 2018-02-21 15:52:12 -0500
+Started GET "/students" for ::1 at 2018-02-21 15:54:19 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 20.1ms)
+
+
+
+NoMethodError - undefined method `render' for #<StudentsService:0x0000000002980650>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/bcc3b4ac94716e3b/variables" for ::1 at 2018-02-21 15:54:20 -0500
+Started POST "/__better_errors/bcc3b4ac94716e3b/eval" for ::1 at 2018-02-21 15:54:24 -0500
+Started POST "/__better_errors/bcc3b4ac94716e3b/eval" for ::1 at 2018-02-21 15:54:45 -0500
+Started POST "/__better_errors/bcc3b4ac94716e3b/eval" for ::1 at 2018-02-21 15:54:49 -0500
+Started POST "/__better_errors/bcc3b4ac94716e3b/eval" for ::1 at 2018-02-21 15:55:39 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/bcc3b4ac94716e3b/eval" for ::1 at 2018-02-21 15:56:11 -0500
+Started POST "/__better_errors/bcc3b4ac94716e3b/eval" for ::1 at 2018-02-21 15:56:57 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/bcc3b4ac94716e3b/eval" for ::1 at 2018-02-21 15:57:50 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (28.7ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started GET "/students" for ::1 at 2018-02-21 15:58:31 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.4ms)
+
+
+
+NoMethodError - undefined method `render' for #<StudentsService:0x0000000002ac4430>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/4da7293b83a4a812/variables" for ::1 at 2018-02-21 15:58:31 -0500
+Started GET "/students" for ::1 at 2018-02-21 15:58:53 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms)
+
+
+
+NoMethodError - undefined method `render' for #<StudentsService:0x000000000364dec8>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 15:59:09 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 2.5ms)
+
+
+
+NoMethodError - undefined method `render' for #<StudentsService:0x00000000033860c8>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 15:59:15 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 2.1ms)
+
+
+
+NoMethodError - undefined method `render' for #<StudentsService:0x000000000385b1e8>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 15:59:36 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `render' for #<StudentsService:0x000000000346dcc0>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:00:16 -0500
+Processing by StudentsController#index as */*
+  [1m[35m (89.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mStudent Load (9.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Completed 500 Internal Server Error in 1165ms
+
+
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+
+NoMethodError - undefined method `render' for #<StudentsService:0x0000000003b6d020>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:00:56 -0500
+  [1m[35m (18.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `render' for #<StudentsService:0x0000000003d73c98>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:03:11 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `render' for #<StudentsService:0x00000000039b8b80>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:03:15 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (11.7ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `render' for #<StudentsService:0x0000000002b8b260>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:03:17 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `render' for #<StudentsService:0x0000000003e6f9f8>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:03:20 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (57.8ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `render' for #<StudentsService:0x0000000003c8d1a8>:
+  app/services/students_service.rb:9:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/aeb2e398b28c5e8b/variables" for ::1 at 2018-02-21 16:03:21 -0500
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/aeb2e398b28c5e8b/eval" for ::1 at 2018-02-21 16:05:07 -0500
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started GET "/students" for ::1 at 2018-02-21 16:05:30 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (21.31ms)
+Completed 200 OK in 136ms (Views: 115.8ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:05:34 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2.9ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:06:16 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2.56ms)
+Completed 200 OK in 72ms (Views: 23.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:06:17 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (3.22ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:06:18 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.23ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:06:25 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2.15ms)
+Completed 200 OK in 23ms (Views: 17.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:06:35 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `render' for #<StudentsService:0x00007f9a2404a0b8>:
+  app/services/students_service.rb:10:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:07:14 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NoMethodError - undefined method `render' for #<StudentsService:0x00007f9a1818f970>:
+  app/services/students_service.rb:10:in `students'
+  app/controllers/students_controller.rb:4:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:07:24 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.4ms)
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:07:44 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.77ms)
+Completed 200 OK in 25ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:07:45 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.1ms)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:08:44 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.1ms)
+Completed 200 OK in 28ms (Views: 3.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:08:45 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.84ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:09:11 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.3ms)
+
+
+
+NameError - undefined local variable or method `safdg' for #<StudentsService:0x000000000260f480>:
+  app/services/students_service.rb:11:in `students'
+  app/controllers/students_controller.rb:4:in `index'
+
+Started POST "/__better_errors/9c220fd66f962e8c/variables" for ::1 at 2018-02-21 16:09:11 -0500
+Started POST "/__better_errors/9c220fd66f962e8c/eval" for ::1 at 2018-02-21 16:09:14 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/9c220fd66f962e8c/eval" for ::1 at 2018-02-21 16:09:24 -0500
+  [1m[35m (10.3ms)[0m  [1m[34mSELECT `students`.`name` FROM `students`[0m
+Started POST "/__better_errors/9c220fd66f962e8c/eval" for ::1 at 2018-02-21 16:09:31 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `students`.`name`, `students`.`id` FROM `students`[0m
+Started POST "/__better_errors/9c220fd66f962e8c/eval" for ::1 at 2018-02-21 16:09:50 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (15.6ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started GET "/students" for ::1 at 2018-02-21 16:09:59 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (11.04ms)
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 1.2ms)
+
+
+
+NoMethodError - undefined method `read_attribute_for_serialization' for #<ActiveModel::Serializer::CollectionSerializer:0x00007f9a241ccc60>:
+  app/controllers/students_controller.rb:4:in `index'
+
+Started POST "/__better_errors/9c220fd66f962e8c/eval" for ::1 at 2018-02-21 16:10:38 -0500
+Started GET "/students" for ::1 at 2018-02-21 16:10:41 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (1.6ms)[0m  [1m[34mSELECT `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (12.23ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.2ms)
+
+
+
+NoMethodError - undefined method `read_attribute_for_serialization' for #<ActiveModel::Serializer::CollectionSerializer:0x0000000003edb130>:
+  app/controllers/students_controller.rb:4:in `index'
+
+Started POST "/__better_errors/644b7aafb66dfbcf/variables" for ::1 at 2018-02-21 16:10:41 -0500
+Started POST "/__better_errors/644b7aafb66dfbcf/eval" for ::1 at 2018-02-21 16:10:46 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Started POST "/__better_errors/644b7aafb66dfbcf/eval" for ::1 at 2018-02-21 16:11:00 -0500
+Started POST "/__better_errors/644b7aafb66dfbcf/eval" for ::1 at 2018-02-21 16:11:04 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (19.3ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started GET "/students" for ::1 at 2018-02-21 16:11:21 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (11.58ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms)
+
+
+
+NoMethodError - undefined method `read_attribute_for_serialization' for #<ActiveModel::Serializer::CollectionSerializer:0x0000000003aba9c0>:
+  app/controllers/students_controller.rb:4:in `index'
+
+Started POST "/__better_errors/5ea338085126c5a0/variables" for ::1 at 2018-02-21 16:11:21 -0500
+Started POST "/__better_errors/5ea338085126c5a0/eval" for ::1 at 2018-02-21 16:11:35 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (0.8ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started POST "/__better_errors/5ea338085126c5a0/eval" for ::1 at 2018-02-21 16:11:44 -0500
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started GET "/students" for ::1 at 2018-02-21 16:11:54 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (0.7ms)[0m  [1m[34mSELECT `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (61.21ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 1.1ms)
+
+
+
+NoMethodError - undefined method `student' for #<Score:0x0000000003a20c08>
+Did you mean?  student_id:
+  app/controllers/students_controller.rb:4:in `index'
+
+Started POST "/__better_errors/95a5637ecd9af045/variables" for ::1 at 2018-02-21 16:11:55 -0500
+Started POST "/__better_errors/95a5637ecd9af045/eval" for ::1 at 2018-02-21 16:12:07 -0500
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (0.7ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started POST "/__better_errors/95a5637ecd9af045/eval" for ::1 at 2018-02-21 16:12:11 -0500
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[36mScore Load (0.5ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started GET "/students" for ::1 at 2018-02-21 16:12:42 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.31ms)
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Completed 500 Internal Server Error in 23ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+
+AbstractController::DoubleRenderError - Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".:
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/7328972d0fd44eac/variables" for ::1 at 2018-02-21 16:12:42 -0500
+Started GET "/students" for ::1 at 2018-02-21 16:12:50 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2.19ms)
+Completed 200 OK in 20ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:12:55 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.77ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:15:00 -0500
+Processing by StudentsController#index as */*
+  [1m[36mScore Load (0.6ms)[0m  [1m[34mSELECT `scores`.* FROM `scores`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (24.68ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 37.8ms)
+
+
+
+NoMethodError - undefined method `student' for #<Score:0x0000000003dc08b8>
+Did you mean?  student_id:
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:15:28 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2.24ms)
+Completed 200 OK in 23ms (Views: 17.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:24:37 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (21.25ms)
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 0.5ms)
+
+
+
+NoMethodError - undefined method `scores' for #<Student:0x00007f9a0c1d9248>:
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:25:03 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (17.26ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `scores' for #<Student:0x00007f9a181455a0>:
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:25:12 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (16.42ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `scores' for #<Student:0x0000000003db8960>:
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/575a1abad1394b06/variables" for ::1 at 2018-02-21 16:25:13 -0500
+Started POST "/__better_errors/575a1abad1394b06/eval" for ::1 at 2018-02-21 16:25:19 -0500
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started GET "/students" for ::1 at 2018-02-21 16:25:43 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (17.54ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.7ms)
+
+
+
+NoMethodError - undefined method `scores' for #<Student:0x00007f9a18293a88>:
+  app/controllers/students_controller.rb:4:in `index'
+
+Started POST "/__better_errors/b0d119568eaeefd4/variables" for ::1 at 2018-02-21 16:25:44 -0500
+Started GET "/students" for ::1 at 2018-02-21 16:25:54 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.37ms)
+Completed 200 OK in 23ms (Views: 16.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:26:09 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (15.29ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `scores' for #<Student:0x0000000003ed0e60>:
+  app/controllers/students_controller.rb:4:in `index'
+
+Started POST "/__better_errors/1b0d285da6b821b4/variables" for ::1 at 2018-02-21 16:26:10 -0500
+Started POST "/__better_errors/1b0d285da6b821b4/eval" for ::1 at 2018-02-21 16:26:17 -0500
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/1b0d285da6b821b4/eval" for ::1 at 2018-02-21 16:26:24 -0500
+Started GET "/students" for ::1 at 2018-02-21 16:26:40 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (1.51ms)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:26:50 -0500
+Processing by StudentsController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:26:55 -0500
+Processing by StudentsController#index as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:27:00 -0500
+Processing by StudentsController#index as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:27:38 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (2.06ms)
+Completed 200 OK in 23ms (Views: 14.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:27:56 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NameError - undefined local variable or method `sfd' for #<StudentsService:0x00007f9a18245720>:
+  app/services/students_service.rb:7:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:27:59 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+  [1m[36mCACHE Student Load (0.1ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m  [["LIMIT", 11]]
+
+NameError - undefined local variable or method `sfd' for #<StudentsService:0x00007f9a24181f08>:
+  app/services/students_service.rb:7:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/d13deb2116323dab/variables" for ::1 at 2018-02-21 16:28:00 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:28:05 -0500
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  `students`.* FROM `students` LIMIT 11[0m
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:28:29 -0500
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:28:48 -0500
+  [1m[36mScore Load (39.8ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:30:01 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:30:18 -0500
+  [1m[36mScore Load (0.8ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:30:29 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:30:50 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:31:10 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:32:47 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:33:14 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:33:21 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:33:28 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:33:47 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:33:53 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:34:15 -0500
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:34:58 -0500
+  [1m[36mScore Load (425.1ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 LIMIT 11[0m
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:35:16 -0500
+  [1m[36mScore Load (23.1ms)[0m  [1m[34mSELECT  `scores`.* FROM `scores` WHERE `scores`.`student_id` = 1 ORDER BY `scores`.`id` ASC LIMIT 1[0m
+Started POST "/__better_errors/d13deb2116323dab/eval" for ::1 at 2018-02-21 16:36:23 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+Started GET "/students" for ::1 at 2018-02-21 16:43:22 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `map' for nil:NilClass:
+  app/services/students_service.rb:8:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/5c4c314756f56d28/variables" for ::1 at 2018-02-21 16:43:25 -0500
+Started POST "/__better_errors/5c4c314756f56d28/eval" for ::1 at 2018-02-21 16:43:37 -0500
+Started GET "/students" for ::1 at 2018-02-21 16:43:45 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (33.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+No serializer found for resource: {:id=>1, :student=>"Yonatan", :scores=>[["Final score", nil], ["Final score", "32"], ["Final score", "45"], ["asfd", "547"], ["dfg", "4325"], ["hvjkmg", "24"]]}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.44ms)
+Completed 200 OK in 335ms (Views: 9.3ms | ActiveRecord: 256.8ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:43:52 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+No serializer found for resource: {:id=>1, :student=>"Yonatan", :scores=>[["Final score", nil], ["Final score", "32"], ["Final score", "45"], ["asfd", "547"], ["dfg", "4325"], ["hvjkmg", "24"]]}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.39ms)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:55:34 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (29.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (272.8ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `subject` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+Completed 500 Internal Server Error in 367ms (ActiveRecord: 304.6ms)
+
+
+
+Mysql2::Error - Unknown column 'subject' in 'field list':
+  app/services/students_service.rb:5:in `block in students'
+  app/services/students_service.rb:5:in `students'
+  app/controllers/students_controller.rb:5:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:55:43 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (16.8ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+No serializer found for resource: {:id=>1, :student=>"Yonatan", :scores=>[["Final score", nil, 1], ["Final score", "32", 1], ["Final score", "45", 1], ["asfd", "547", 1], ["dfg", "4325", 1], ["hvjkmg", "24", 1]]}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.54ms)
+Completed 200 OK in 54ms (Views: 9.6ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/scores" for ::1 at 2018-02-21 16:56:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/scores"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/students" for ::1 at 2018-02-21 16:57:03 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+No serializer found for resource: {:id=>1, :student=>"Yonatan", :scores=>[["Final score", nil, 1], ["Final score", "32", 1], ["Final score", "45", 1], ["asfd", "547", 1], ["dfg", "4325", 1], ["hvjkmg", "24", 1]]}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.49ms)
+Completed 200 OK in 41ms (Views: 15.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 16:58:03 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant StudentsController::StudentsWithScoresService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:58:35 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 617ms
+
+
+
+NameError - uninitialized constant StudentsController::StudentsWithScoresService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:59:24 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 4ms
+
+
+
+NameError - uninitialized constant StudentsController::StudentsService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:59:34 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 5ms
+
+
+
+NameError - uninitialized constant StudentsController::StudentsService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:59:49 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 291ms
+
+
+
+NameError - uninitialized constant StudentsController::StudentsService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 16:59:50 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 5ms
+
+
+
+NameError - uninitialized constant StudentsController::StudentsService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 17:00:21 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 5ms
+
+
+
+NameError - uninitialized constant StudentsController::StudentsService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 17:00:22 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 5ms
+
+
+
+NameError - uninitialized constant StudentsController::StudentsService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 17:00:22 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 3ms
+
+
+
+NameError - uninitialized constant StudentsController::StudentsService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 17:00:23 -0500
+Processing by StudentsController#index as */*
+Completed 500 Internal Server Error in 3ms
+
+
+
+NameError - uninitialized constant StudentsController::StudentsService:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started GET "/students" for ::1 at 2018-02-21 17:01:00 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 209ms
+
+
+
+NameError - undefined local variable or method `sfdr' for #<StudentsController:0x00000000039e85b0>:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started POST "/__better_errors/aaf92775094629ec/variables" for ::1 at 2018-02-21 17:01:01 -0500
+Started POST "/__better_errors/aaf92775094629ec/eval" for ::1 at 2018-02-21 17:01:07 -0500
+Started POST "/__better_errors/aaf92775094629ec/eval" for ::1 at 2018-02-21 17:01:21 -0500
+Started GET "/students" for ::1 at 2018-02-21 17:02:03 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 450ms
+
+
+
+NameError - undefined local variable or method `sfdr' for #<StudentsController:0x0000000004a821c8>:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started POST "/__better_errors/141bbba566d2c1d5/variables" for ::1 at 2018-02-21 17:02:04 -0500
+Started POST "/__better_errors/141bbba566d2c1d5/eval" for ::1 at 2018-02-21 17:02:07 -0500
+Started POST "/__better_errors/141bbba566d2c1d5/eval" for ::1 at 2018-02-21 17:02:12 -0500
+Started GET "/students" for ::1 at 2018-02-21 17:02:50 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 231ms
+
+
+
+NameError - undefined local variable or method `sfdr' for #<StudentsController:0x00000000049190e8>:
+  app/controllers/students_controller.rb:3:in `index'
+
+Started POST "/__better_errors/cde2233ebaa43c8f/variables" for ::1 at 2018-02-21 17:02:51 -0500
+Started POST "/__better_errors/cde2233ebaa43c8f/eval" for ::1 at 2018-02-21 17:02:55 -0500
+Started GET "/students" for ::1 at 2018-02-21 17:05:18 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 196ms
+
+
+
+NameError - undefined local variable or method `sfdg' for #<StudentsController:0x0000000004aab000>:
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/c71bc92017de6e52/variables" for ::1 at 2018-02-21 17:05:19 -0500
+Started POST "/__better_errors/c71bc92017de6e52/eval" for ::1 at 2018-02-21 17:05:25 -0500
+Started POST "/__better_errors/c71bc92017de6e52/eval" for ::1 at 2018-02-21 17:05:26 -0500
+Started POST "/__better_errors/c71bc92017de6e52/eval" for ::1 at 2018-02-21 17:05:30 -0500
+Started GET "/students" for ::1 at 2018-02-21 17:07:24 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 175ms
+
+
+
+NameError - undefined local variable or method `sfdg' for #<StudentsController:0x0000000004b449d0>:
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/3cc12a77a3caeb91/variables" for ::1 at 2018-02-21 17:07:25 -0500
+Started POST "/__better_errors/3cc12a77a3caeb91/eval" for ::1 at 2018-02-21 17:07:28 -0500
+Started POST "/__better_errors/3cc12a77a3caeb91/eval" for ::1 at 2018-02-21 17:07:35 -0500
+Started GET "/students" for ::1 at 2018-02-21 17:08:13 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 179ms
+
+
+
+NameError - undefined local variable or method `sfdg' for #<StudentsController:0x0000000004ba4fb0>:
+  app/controllers/students_controller.rb:5:in `index'
+
+Started POST "/__better_errors/27f21ae03aff80b5/variables" for ::1 at 2018-02-21 17:08:13 -0500
+Started POST "/__better_errors/27f21ae03aff80b5/eval" for ::1 at 2018-02-21 17:08:15 -0500
+Started POST "/__better_errors/27f21ae03aff80b5/eval" for ::1 at 2018-02-21 17:08:18 -0500
+Started GET "/students" for ::1 at 2018-02-21 17:08:34 -0500
+Processing by StudentsController#index as HTML
+  [1m[35m (242.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mStudent Load (251.2ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (17.3ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+No serializer found for resource: {:id=>1, :student=>"Yonatan", :scores=>[["Final score", nil, 1], ["Final score", "32", 1], ["Final score", "45", 1], ["asfd", "547", 1], ["dfg", "4325", 1], ["hvjkmg", "24", 1]]}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.3ms)
+Completed 200 OK in 1703ms (Views: 43.3ms | ActiveRecord: 687.5ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 17:08:41 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (122.5ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+No serializer found for resource: {:id=>1, :student=>"Yonatan", :scores=>[["Final score", nil, 1], ["Final score", "32", 1], ["Final score", "45", 1], ["asfd", "547", 1], ["dfg", "4325", 1], ["hvjkmg", "24", 1]]}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.36ms)
+Completed 200 OK in 128ms (Views: 1.3ms | ActiveRecord: 123.0ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 17:14:12 -0500
+Processing by StudentsController#index as */*
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 2[0m
+No serializer found for resource: {:id=>1, :student=>"Yonatan", :scores=>[["Final score", nil, 1], ["Final score", "32", 1], ["Final score", "45", 1], ["asfd", "547", 1], ["dfg", "4325", 1], ["hvjkmg", "24", 1], ["Final score", "15", 1]]}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.85ms)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 17:15:03 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 2[0m
+No serializer found for resource: {:id=>1, :student=>"Yonatan", :scores=>[["Final score", nil, 1], ["Final score", "32", 1], ["Final score", "45", 1], ["asfd", "547", 1], ["dfg", "4325", 1], ["hvjkmg", "24", 1], ["Final score", "15", 1]]}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.58ms)
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/students" for ::1 at 2018-02-21 17:40:30 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT `students`.* FROM `students`[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `scores`.`description`, `scores`.`score`, `scores`.`subject_id` FROM `scores` WHERE `scores`.`student_id` = 2[0m
+No serializer found for resource: {:id=>1, :student=>"Yonatan", :scores=>[["Final score", nil, 1], ["Final score", "32", 1], ["Final score", "45", 1], ["asfd", "547", 1], ["dfg", "4325", 1], ["hvjkmg", "24", 1], ["Final score", "15", 1]]}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.39ms)
+Completed 200 OK in 32ms (Views: 6.3ms | ActiveRecord: 4.2ms)
+
+
